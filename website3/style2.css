@@ -1,0 +1,280 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(back-image.png);
+    object-fit: contain;
+    background-size: cover;
+    background-position: center;
+}
+
+/* body{
+    object-fit: contain;
+} */
+.main {
+    height: 100vh;
+    /* width: 100%; */
+    position: relative;
+    /* display: flex; */
+    flex-direction: column;
+}
+
+.navbar {
+    /* background-color: antiquewhite; */
+    height: 10%;
+    width: 100%;
+    display: flex;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    margin-left: 13vw;
+    /* font-size: larger; */
+}
+
+.signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15vw;
+    gap: 2.5vw;
+}
+
+.logo img {
+    width: 30%;
+    height: 100%;
+    object-fit: contain;
+    margin-left: 9vw;
+}
+
+.body {
+    /* background-color: blue; */
+    height: 90vh;
+    width: 100%;
+    display: flex;
+}
+
+.left {
+    width: 60%;
+    height: 100%;
+}
+
+.left h1 {
+    /* height: 10%; */
+    margin-top: 14vh;
+    margin-left: 9vw;
+    font-size: 5vw;
+}
+
+.left span {
+    /* height: 10%; */
+    margin-top: 9vw;
+    margin-left: 9vw;
+    font-weight: bolder;
+    font-size: 5vw;
+}
+
+.left p {
+    margin-top: 2vh;
+    margin-left: 9vw;
+    font-size: 1.35vw;
+}
+
+.left button {
+    margin-left: 9vw;
+    margin-top: 3vh;
+    font-size: 1.1vw;
+    transition: background-color 0.3s ease;
+    background-image: linear-gradient(144deg, #fb1968, rgb(209, 23, 162), #dd05c4);
+    /* padding: 1.5vh 2.9vw; */
+    padding: 13px 56px;
+    border-radius: 22px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.left button:hover {
+    transform: scale(1.1);
+}
+
+.signin button {
+    font-size: 1vw;
+    transition: background-color 0.3s ease;
+    background-image: linear-gradient(144deg, #fb1968, rgb(209, 23, 162), #dd05c4);
+    padding: 13px 43px;
+    border-radius: 22px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.signin button:hover {
+    transform: scale(1.1);
+}
+
+.signin i {
+    display: none;
+}
+
+
+.right {
+    width: 40%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: contain; */
+    background-size: cover;
+    background-position: center;
+}
+@media (max-width: 1200px) {
+    .left h1 {
+        font-size: 6vw;
+    }
+    .left span {
+        font-size: 6vw;
+    }
+    .left p {
+        font-size: 1.75vw;
+    }
+    .left button {
+        font-size: 2vw;
+        padding: 1.3vw 3.5vw;
+        transition: background-color 0.3s ease;
+    }
+    .left button:hover {
+        transform: scale(1.1);
+    }
+    .ri-close-large-fill {
+        display: none; /* Adjust if needed based on your UI design */
+    }
+
+}
+
+@media (max-width:700px) {
+    .navbar {
+        /* background-color: wheat; */
+        height: 10%;
+        width: 100%;
+    }
+
+    .content {
+        display: none;
+    }
+
+    .signin i {
+        display: block;
+    }
+
+    .signin h4 {
+        display: none;
+    }
+
+    .ri-user-fill {
+        margin-right: 9vw;
+        font-size: large;
+    }
+
+    .ri-menu-3-fill {
+        font-weight: bolder;
+        font-size: x-large;
+    }
+
+    .left h1 {
+        font-size: 12vw;
+        margin-top: 7vh;
+    }
+
+    .body {
+        height: 90%;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+        height: 50%;
+        /* background-color: #6645e9; */
+    }
+
+    .left span {
+        font-size: 12vw;
+        margin-top: 1vh;
+
+    }
+
+    .left button {
+        font-size: 3vw;
+        padding: 2.5vw 7vw;
+        transition: background-color 0.3s ease;
+    }
+    .left button:hover {
+        transform: scale(1.1);
+    }
+
+    .right {
+        width: 100%;
+        height: 50%;
+    }
+
+    .right img {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .left p {
+        font-size: 2.5vw;
+    }
+    .signin i {
+        display: block; /* This affects all icons within `.signin` */
+    }
+    /* Make sure `#cross` is handled separately */
+    #menu {
+        display: block; /* Menu icon is visible by default on small screens */
+    }
+    #cross {
+        display: none; /* Keep cross hidden initially, toggle in JavaScript */
+    }
+}
+
+#new-content {
+    display: none;
+    background-color: transparent;
+    backdrop-filter: blur(14px);
+    position: absolute;
+    height: 25vh;
+    width: 100vw;
+    top: 70px;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+}
+.new-content h4{
+    padding: 10px;
+    font-size:4.8vw;
+    font-weight: bold;
+    text-align: center;
+    line-height: 6vw;
+}
+.ri-close-large-fill {
+    display: none;
+    font-size: 5vw;
+    font-weight: bolder;
+    color: black;
+}
+
+
+
+.ri-menu-3-fill:hover{
+    transform: scale(1.1);
+}
